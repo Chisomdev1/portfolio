@@ -1,0 +1,12 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: white;
+}
+/* font-family: "Inter", sans-serif; */
+.circle-image {
+  width: 45px; /* Reduce width for smaller screens */
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
