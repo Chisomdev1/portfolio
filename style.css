@@ -10,3 +10,19 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.lang-box{
+  background-color: black;
+  box-shadow: 5px blue;
+}
+
+.message_button{
+  background-color: blue;
+  color: white;
+  justify-content: center;
+}
+
+.message_button:hover{
+  background-color: brown;
+  color: white;
+}
