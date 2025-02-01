@@ -3,12 +3,44 @@ body {
   background-color: black;
   color: white;
 }
-/* font-family: "Inter", sans-serif; */
+
+
+/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Circular image container */
+.circle-container {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the container circular */
+  overflow: hidden; /* Ensures the image stays within the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+  position: absolute;
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  margin-top: 20px; 
+}
+
+/* Style the image to fit inside the circle */
 .circle-image {
-  width: 45px; /* Reduce width for smaller screens */
-  height: 45px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* Content below the image */
+.content {
+  padding-top: 240px; 
+  text-align: center; 
+  padding-left: 20px; 
+  padding-right: 20px; 
 }
 
 .lang-box{
@@ -16,16 +48,16 @@ body {
   box-shadow: 5px blue;
 }
 
+.input-column{
+  width: 60%;
+}
 .message_button{
   background-color: blue;
   color: white;
-  justify-content: center;
+  width: 60%;
 }
 
-.message_button:hover{
-  background-color: brown;
-  color: white;
-}
+
 .social_links{
   color: white;
 }

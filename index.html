@@ -19,13 +19,12 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <img
-      src="image/20240906_171548.jpg"
-      alt="Circular Image"
-      class="circle-image"
-    />
+    <div class="circle-container justify-content-center">
+      <img src="image/20240906_171548.jpg" alt="Circle Image" class="circle-image" />
+    </div>
 
-    <h1 class="text-center">chisomdev_</h1>
+    <div class="content justify-content-center">
+      <h1 class="text-center">Chisomdev_</h1>
     <p class="text-center">
       hey! I'm a result-driven Fullstack Web developer specially in building
       dynamic and user-interface website.
@@ -90,17 +89,21 @@
       <p class="text-center">Still cooking</p>
     </div>
 
-    <div class="form-section">
-      <input type="text" placeholder="Enter your name" />
-      <input type="text" placeholder="Enter your email" />
-      <input type="text" placeholder="Enter your message" />
+    <div class="form-section justify-content-center">
+      <input class="input-column" type="text" placeholder="Enter your name" />
+      <input class="input-column" type="text" placeholder="Enter your email" />
+      <input
+        class="input-column"
+        type="text"
+        placeholder="Enter your message"
+      />
       <button class="message_button">Message Me</button>
     </div>
 
     <h5>Interested in working with me? Let's work!</h5>
     <p>chisomchidike03@gmail</p>
 
-    <div class="contain-fluid row justify-content-center mb-4">
+    <div class="container-fluid row justify-content-center mb-4">
       <div class="col-lg-2 col-sm-2 col-2">
         <a class="social_links" href="https://github.com/Chisomdev1">
           <i class="bi bi-github"></i>
@@ -120,8 +123,14 @@
         </a>
       </div>
       <div class="col-lg-2 col-sm-2 col-2">
-        <i class="bi bi-instagram"></i>
+        <a
+          class="social_links"
+          href="https://www.instagram.com/chisom_dev?igsh=MmRyeXg4cXhqa213"
+        >
+          <i class="bi bi-instagram"></i>
+        </a>
       </div>
+    </div>
     </div>
   </body>
 </html>
