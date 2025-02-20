@@ -13,8 +13,8 @@ body, html {
 
 /* Circular image container */
 .circle-container {
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Adjust size as needed */
+  width: 185px; /* Adjust size as needed */
+  height: 179px; /* Adjust size as needed */
   border-radius: 50%; /* Makes the container circular */
   overflow: hidden; /* Ensures the image stays within the circle */
   display: flex;
@@ -48,16 +48,110 @@ body, html {
   box-shadow: 5px blue;
 }
 
+ /* Projects Section */
+ #projects {
+  padding: 2rem 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.project {
+  background: #3335;
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+ /* Contact Section */
+ #contact {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact button {
+  padding: 0.5rem;
+  background: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .input-column{
   width: 60%;
 }
 .message_button{
   background-color: blue;
   color: white;
-  width: 60%;
+  width: 70%;
+  border: 0px;
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 100%;
 }
 
+.about-section{
+  width: 75%;
+}
 
 .social_links{
   color: white;
 }
+
+.level_up{
+  background-color: #0073e6;
+  padding: 20px 10px;
+  border-radius: 12px;
+  border: 0;
+  width: 90%;
+}
+.btn_letchat{
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: 0px;
+  border-radius: 12px;
+  padding: 20px 5px;
+  width: 22%;
+}
+.live_view{
+  color: white;
+  text-decoration: none;
+}
+.live_div{
+  background-color: blue;
+  width: 30%;
+  padding: 3px 5px;
+  border: 0px;
+  border-radius: 7px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-section{
+    width: 100%;
+  }
+}
+
