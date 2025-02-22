@@ -4,9 +4,9 @@ body {
   color: white;
 }
 
-
 /* Reset default margin and padding */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -22,34 +22,45 @@ body, html {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
   position: absolute;
-  top: 0; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  margin-top: 20px; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
 }
 
 /* Style the image to fit inside the circle */
 .circle-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
+.btn_bookcall {
+  width: 50%;
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  border: 0px;
+}
+
+.mobile-image {
+  display: none;
+}
 /* Content below the image */
 .content {
-  padding-top: 240px; 
-  text-align: center; 
-  padding-left: 20px; 
-  padding-right: 20px; 
+  padding-top: 240px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.lang-box{
+.lang-box {
   background-color: black;
   box-shadow: 5px blue;
 }
 
- /* Projects Section */
- #projects {
+/* Projects Section */
+#projects {
   padding: 2rem 0;
 }
 
@@ -67,8 +78,8 @@ body, html {
   text-align: center;
 }
 
- /* Contact Section */
- #contact {
+/* Contact Section */
+#contact {
   padding: 2rem 0;
   text-align: center;
 }
@@ -81,7 +92,8 @@ body, html {
   margin: 0 auto;
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -96,10 +108,10 @@ body, html {
   cursor: pointer;
 }
 
-.input-column{
+.input-column {
   width: 60%;
 }
-.message_button{
+.message_button {
   background-color: blue;
   color: white;
   width: 70%;
@@ -109,22 +121,22 @@ body, html {
   height: 100%;
 }
 
-.about-section{
+.about-section {
   width: 75%;
 }
 
-.social_links{
+.social_links {
   color: white;
 }
 
-.level_up{
+.level_up {
   background-color: #0073e6;
   padding: 20px 10px;
   border-radius: 12px;
   border: 0;
   width: 90%;
 }
-.btn_letchat{
+.btn_letchat {
   background-color: black;
   color: white;
   font-size: 16px;
@@ -133,21 +145,21 @@ body, html {
   padding: 20px 5px;
   width: 22%;
 }
-.live_view{
+.live_view {
   color: white;
   text-decoration: none;
 }
-.live_view:hover{
+.live_view:hover {
   color: white;
 }
-.live_div{
+.live_div {
   width: 40%;
   padding: 3px 5px;
   border: 0px;
   border-radius: 7px;
 }
 
-.project_img{
+.project_img {
   border-radius: 30px;
 }
 
@@ -180,36 +192,52 @@ body, html {
   color: white;
 }
 .faq-question::after {
-  content: '+';
+  content: "+";
   font-size: 20px;
 }
 .faq-item.active .faq-answer {
   display: block;
 }
 .faq-item.active .faq-question::after {
-  content: '-';
+  content: "-";
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+.navbar-nav .nav-link.active {
+  color: yellow !important;
+}
+section {
+  padding: 100px 0;
+  min-height: 100vh;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
-  .levelup_text{
+  .levelup_text {
     text-align: left;
   }
   .project-grid {
     grid-template-columns: 1fr;
   }
-  .about-section{
+  .about-section {
     width: 100%;
   }
 
-  .btn_letchat{
-    
+  .btn_letchat {
     padding: 13px 8px;
     width: 60%;
   }
-  .project_img{
+  .project_img {
     border-radius: 25px;
   }
-}
 
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image{
+    display: inline-flex;
+  }
+}
