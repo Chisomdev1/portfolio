@@ -137,21 +137,39 @@ body, html {
   color: white;
   text-decoration: none;
 }
+.live_view:hover{
+  color: white;
+}
 .live_div{
-  background-color: blue;
-  width: 30%;
+  width: 40%;
   padding: 3px 5px;
   border: 0px;
   border-radius: 7px;
 }
+
+.project_img{
+  border-radius: 32px;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
 
+  .levelup_text{
+    text-align: left;
+  }
   .project-grid {
     grid-template-columns: 1fr;
   }
   .about-section{
     width: 100%;
+  }
+
+  .btn_letchat{
+    
+    padding: 13px 8px;
+    width: 60%;
   }
 }
 
