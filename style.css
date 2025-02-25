@@ -200,8 +200,16 @@ body .terminal-box {
   font-size: 18px;
   border: 0px;
   border-radius: 12px;
-  padding: 20px 5px;
+  padding: 20px 20px;
   width: 15%;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+.btn_letchat:hover{
+
+  color: white;
 }
 
 .live_div {
@@ -388,8 +396,16 @@ body {
       display: inline-block;
       position: absolute;
       top: 15px;
-      right: 80px;
+      right: 90px;
       z-index: 1050;
+  }
+  .lets-talk-btn:focus{
+    outline: none !important;
+    border: none !important;
+  }
+  .lets-talk-btn:active{
+    outline: none !important ;
+    border: none !important;
   }
 }
 @media (min-width: 992px) {
