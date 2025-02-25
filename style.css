@@ -257,8 +257,18 @@ html {
   .desktop-image {
     display: none;
   }
-  .mobile-image {
+  .mobile_image_container{
     display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  .mobile-image{
+    display: block;
+    width: 75%;
+    margin: 10px auto -20px auto;
+  }
+  .hey_vistors{
+    white-space: normal;
   }
   .btn_bookcall {
     width: 80%;
