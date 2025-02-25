@@ -399,7 +399,7 @@ body {
       right: 90px;
       z-index: 1050;
   }
-  .lets-talk-btn:focus{
+  .lets-talk-btn:focus-visible{
     outline: none !important;
     border: none !important;
   }
