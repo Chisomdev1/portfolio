@@ -5,17 +5,17 @@ document.querySelectorAll('.faq-question').forEach(item => {
   });
 });
 
-document.querySelectorAll('.nav-link').forEach(item => {
-  item.addEventListener('click', () => {
-      document.querySelector('.navbar-collapse').classList.remove('show');
-  });
+document.getElementById('navbarToggler').addEventListener('click', () => {
+  const navbarNav = document.getElementById('navbarNav');
+  navbarNav.classList.toggle('show');
+  document.getElementById('navbarToggler').classList.toggle('collapsed');
+  document.body.classList.toggle('no-scroll');
 });
 
-document.getElementById('navbarToggler').addEventListener('click', () => {
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-  if (navbarCollapse.classList.contains('show')) {
-      navbarCollapse.classList.remove('show');
-  } else {
-      navbarCollapse.classList.add('show');
-  }
+document.querySelectorAll('.nav-link').forEach(item => {
+  item.addEventListener('click', () => {
+      document.getElementById('navbarNav').classList.remove('show');
+      document.getElementById('navbarToggler').classList.add('collapsed');
+      document.body.classList.remove('no-scroll');
+  });
 });
