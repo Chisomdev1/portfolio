@@ -73,7 +73,7 @@ html {
 .project {
   background: #3335;
   padding: 2rem 1rem 1rem 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -258,7 +258,7 @@ html {
     display: none;
   }
   .mobile-image {
-    display: inline-flex;
+    display: inline-block;
   }
   .btn_bookcall {
     width: 80%;
@@ -267,5 +267,6 @@ html {
   }
   .Development_skills {
    text-align: left;
+   width: 100%;
   }
 }
