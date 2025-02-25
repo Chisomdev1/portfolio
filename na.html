@@ -38,6 +38,7 @@
                 transition: all 0.3s ease-in-out;
                 visibility: hidden;
                 opacity: 0;
+                overflow-y: hidden; /* Prevent scrolling */
             }
             .navbar-collapse.show {
                 visibility: visible;
@@ -46,7 +47,7 @@
             .navbar-toggler {
                 position: absolute;
                 top: 15px;
-                right: 15px;
+                right: 20px;
                 z-index: 1050;
             }
             .navbar-toggler-icon {
@@ -55,10 +56,10 @@
                 height: 1.5em;
                 vertical-align: middle;
                 content: "";
-                background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") center/contain no-repeat;
+                background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6l18 18M6 24L24 6'/%3E%3C/svg%3E") center/contain no-repeat;
             }
             .navbar-toggler.collapsed .navbar-toggler-icon {
-                background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6l18 18M6 24L24 6'/%3E%3C/svg%3E") center/contain no-repeat;
+                background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") center/contain no-repeat;
             }
             .navbar-nav {
                 width: 100%;
@@ -74,6 +75,18 @@
             .navbar-nav .nav-link:hover {
                 background-color: rgba(255, 255, 255, 0.1);
             }
+            .lets-talk-btn {
+                display: inline-block;
+                position: absolute;
+                top: 15px;
+                right: 80px;
+                z-index: 1050;
+            }
+        }
+        @media (min-width: 992px) {
+            .lets-talk-btn {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -81,11 +94,11 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">ScrollSpy Navbar</a>
+            <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler collapsed" type="button" id="navbarToggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="btn btn-primary ms-2" id="letsTalkButton">Let's Talk</button>
+            <a class="btn btn-primary ms-2 lets-talk-btn" id="letsTalkButton" href="https://wa.me/yourphonenumber" target="_blank">Let's Talk</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -112,20 +125,21 @@
             const navbarNav = document.getElementById('navbarNav');
             navbarNav.classList.toggle('show');
             document.getElementById('navbarToggler').classList.toggle('collapsed');
+            document.body.classList.toggle('no-scroll');
         });
 
-        document.getElementById('letsTalkButton').addEventListener('click', () => {
-            const navbarNav = document.getElementById('navbarNav');
-            navbarNav.classList.toggle('show');
-            document.getElementById('navbarToggler').classList.toggle('collapsed');
-        });
-        
         document.querySelectorAll('.nav-link').forEach(item => {
             item.addEventListener('click', () => {
                 document.getElementById('navbarNav').classList.remove('show');
                 document.getElementById('navbarToggler').classList.add('collapsed');
+                document.body.classList.remove('no-scroll');
             });
         });
     </script>
+    <style>
+        .no-scroll {
+            overflow: hidden;
+        }
+    </style>
 </body>
 </html>
