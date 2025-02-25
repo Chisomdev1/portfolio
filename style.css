@@ -120,9 +120,31 @@ html {
   border-radius: 10px;
   height: 100%;
 }
+.github_repo{
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.github_repo:hover{
+  color: white;
+}
 
+.live_view {
+  color: black;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 0px;
+  text-decoration: none;
+  background-color: white;
+}
+.live_view:hover {
+  color: black;
+}
 .about-section {
-  width: 75%;
+  width: 80%;
 }
 
 .social_links {
@@ -145,13 +167,7 @@ html {
   padding: 20px 5px;
   width: 22%;
 }
-.live_view {
-  color: white;
-  text-decoration: none;
-}
-.live_view:hover {
-  color: white;
-}
+
 .live_div {
   width: 40%;
   padding: 3px 5px;
@@ -202,16 +218,20 @@ html {
   content: "-";
 }
 
-body {
-  position: relative;
-  scroll-behavior: smooth;
+
+.Development_skills {
+  background-color: #4b4a4a;
+  padding: 20px 15px 1px 15px;
+  border: 0px;
+  border-radius: 12px;
+  margin: 8px 10px;
+  width: 30%;
 }
-.navbar-nav .nav-link.active {
-  color: yellow !important;
+.Development_row{
+  width: 100%;
 }
-section {
-  padding: 100px 0;
-  min-height: 100vh;
+.live_site{
+  text-align: left;
 }
 
 /* Responsive Design */
@@ -237,7 +257,15 @@ section {
   .desktop-image {
     display: none;
   }
-  .mobile-image{
+  .mobile-image {
     display: inline-flex;
+  }
+  .btn_bookcall {
+    width: 80%;
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+  .Development_skills {
+   text-align: left;
   }
 }
