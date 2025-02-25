@@ -25,6 +25,10 @@ html {
   font-size: 17px;
 }
 
+.btn_bookcall:hover {
+  color: white;
+}
+
 .mobile-image {
   display: none;
 }
