@@ -30,10 +30,11 @@
                 height: 100vh;
                 background: rgba(0, 0, 0, 0.9);
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: flex-start;
+                align-items: flex-start;
                 flex-direction: column;
-                text-align: center;
+                text-align: left;
+                padding-top: 60px;
                 transition: all 0.3s ease-in-out;
                 visibility: hidden;
                 opacity: 0;
@@ -59,6 +60,20 @@
             .navbar-toggler.collapsed .navbar-toggler-icon {
                 background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M6 6l18 18M6 24L24 6'/%3E%3C/svg%3E") center/contain no-repeat;
             }
+            .navbar-nav {
+                width: 100%;
+            }
+            .navbar-nav .nav-item {
+                width: 100%;
+            }
+            .navbar-nav .nav-link {
+                width: 100%;
+                text-align: left;
+                padding-left: 1rem;
+            }
+            .navbar-nav .nav-link:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
         }
     </style>
 </head>
@@ -70,6 +85,7 @@
             <button class="navbar-toggler collapsed" type="button" id="navbarToggler">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <button class="btn btn-primary ms-2" id="letsTalkButton">Let's Talk</button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -93,6 +109,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('navbarToggler').addEventListener('click', () => {
+            const navbarNav = document.getElementById('navbarNav');
+            navbarNav.classList.toggle('show');
+            document.getElementById('navbarToggler').classList.toggle('collapsed');
+        });
+
+        document.getElementById('letsTalkButton').addEventListener('click', () => {
             const navbarNav = document.getElementById('navbarNav');
             navbarNav.classList.toggle('show');
             document.getElementById('navbarToggler').classList.toggle('collapsed');
